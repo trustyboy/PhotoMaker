@@ -59,7 +59,7 @@ pipe = PhotoMakerStableDiffusionXLAdapterPipeline.from_pretrained(
     variant="fp16",
 ).to(device)
 
-#pipe.enable_vae_slicing()
+pipe.enable_vae_slicing()
 
 pipe.load_photomaker_adapter(
     os.path.dirname(photomaker_ckpt),
