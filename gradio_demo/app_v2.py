@@ -54,12 +54,12 @@ adapter = T2IAdapter.from_pretrained(
 pipe = PhotoMakerStableDiffusionXLAdapterPipeline.from_pretrained(
     base_model_path, 
     adapter=adapter, 
-    torch_dtype=torch_dtype,
+    torch_dtype=torch.float16,
     use_safetensors=True, 
     variant="fp16",
 ).to(device)
 
-pipe.enable_vae_slicing()
+#pipe.enable_vae_slicing()
 
 pipe.load_photomaker_adapter(
     os.path.dirname(photomaker_ckpt),
