@@ -1,6 +1,6 @@
 torch
 torchvision
-diffusers
+diffusers==0.29.1
 transformers
 huggingface-hub
 spaces
@@ -11,3 +11,5 @@ omegaconf
 peft
 gradio
 insightface==0.7.3
+onnxruntime
+
